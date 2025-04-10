@@ -1,0 +1,5 @@
+yarn to install
+(yarn add sass for support sass)
+yarn dev to start develop
+need to add '.' before '/' in develop to add styles after buid project.
+enter points for images in scss : './img/...' ; for fonts: './fonts/...'
