@@ -1,3 +1,5 @@
+$breakpoint768: 768px;
+
 .navbar {
   overflow: hidden;
   display: block;
@@ -15,6 +17,7 @@
 
   &__item {
     opacity: 0.8;
+
     &:hover {
       opacity: 1;
       transition: 0.3s ease;
@@ -28,6 +31,7 @@
   justify-content: space-between;
   max-width: 250px;
   width: 100%;
+
   .menu__item {
     a {
       text-decoration: none;
@@ -40,9 +44,11 @@
   .menu__item {
     display: none;
   }
+
   .logo {
     display: none;
   }
+
   .navbar {
     display: none;
     //justify-content: flex-end;

@@ -1,7 +1,8 @@
-@import "./reset.scss";
-@import "./styles/_colors";
-@import "./styles/_media";
-@import "./fonts/fonts.scss";
+@use "sass:meta";
+@use "reset.scss";
+@use "styles/_colors";
+@use "styles/_media";
+@use "fonts/fonts.scss";
 
 // @font-face {
 //   font-family: "Gilroy";
@@ -14,12 +15,13 @@
 //$fontMain: "Gilroy", sans-serif;
 
 .container {
-  max-width: ($containerWidth + $containerPadding) + px;
+  max-width: (media.$containerWidth + media.$containerPadding) + px;
   margin: 0 auto;
-  padding: 0 $containerSidePadding + px;
+  padding: 0 media.$containerSidePadding + px;
   //font-family: $fontMain;
   overflow: hidden;
-  @media (max-width: $breakpoint480) {
+
+  @media (max-width: media.$breakpoint480) {
     padding: 5px;
   }
 }
@@ -33,11 +35,13 @@
 .section__wrapper {
   padding-left: 80px;
   padding-right: 80px;
-  @media (max-width: $breakpoint768) {
+
+  @media (max-width: media.$breakpoint768) {
     padding-left: 40px;
     padding-right: 40px;
   }
-  @media (max-width: $breakpoint480) {
+
+  @media (max-width: media.$breakpoint480) {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -61,7 +65,7 @@
   height: auto;
 }
 
-@import "./styles/bloks/nav/hamburger-nav.scss";
-@import "./styles/bloks/nav/nav.scss";
-@import "./styles/bloks/header/header.scss";
-@import "./styles/bloks/footer/footer.scss";
+@include meta.load-css("styles/bloks/nav/hamburger-nav.scss");
+@include meta.load-css("styles/bloks/nav/nav.scss");
+@include meta.load-css("styles/bloks/header/header.scss");
+@include meta.load-css("styles/bloks/footer/footer.scss");

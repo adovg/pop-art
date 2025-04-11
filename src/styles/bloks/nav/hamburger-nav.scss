@@ -1,6 +1,9 @@
+$breakpoint768: 768px;
+
 .mobile {
   display: none;
 }
+
 .burger {
   display: none;
   cursor: pointer;
@@ -53,9 +56,9 @@
 
   .menu__item-mobile {
     cursor: pointer;
-    a {
 
-    }
+    a {}
+
     &:hover {
       transition: 0.8s hover ease;
     }
@@ -66,12 +69,13 @@
   .mobile {
     margin: 10px;
     padding: 10px;
-    display: flex; 
+    display: flex;
     justify-content: flex-end;
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
   .burger__btn {
     display: flex;
   }
-} 
+}
