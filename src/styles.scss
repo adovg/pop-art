@@ -4,6 +4,20 @@
 @use "styles/_media";
 @use "fonts/fonts.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+
+// .josefin-sans-<uniquifier> {
+//   font-family: "Josefin Sans", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }
+
 // @font-face {
 //   font-family: "Gilroy";
 //   src: url("./fonts/Gilroy-SemiBold.woff");
@@ -69,3 +83,4 @@
 @include meta.load-css("styles/bloks/nav/nav.scss");
 @include meta.load-css("styles/bloks/header/header.scss");
 @include meta.load-css("styles/bloks/footer/footer.scss");
+@include meta.load-css("styles/elements/slider/slider.scss");
