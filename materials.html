@@ -12,43 +12,91 @@
   </head>
   <body>
     <div class="container">
+      <nav class="navbar">
+        <div class="menu">
+          <div class="logo">
+            <img src="./src/img/star.svg" alt="Logo" />
+          </div>
+
+          <ul class="menu__items">
+            <li class="menu__item"><a href="./index.html"> About</a></li>
+            <li class="menu__item">
+              <a href="./materials.html"> Materials</a>
+            </li>
+            <li class="menu__item"><a href="./mainArticle.html"> Text</a></li>
+            <li class="menu__item"><a href="#"> Item #4</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="mobile">
+        <div class="burger__btn">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <ul class="menu-mobile hidden">
+        <div class="logo-mobile">
+          <img src="./src/img/star.svg" alt="" />
+        </div>
+
+        <li class="menu__item-mobile"><a href="#"> Item #1</a></li>
+        <li class="menu__item-mobile"><a href="#"> Item #2</a></li>
+        <li class="menu__item-mobile"><a href="#"> Item #3</a></li>
+        <li class="menu__item-mobile"><a href="#"> Item #4</a></li>
+      </ul>
+
       <section class="header section__wrapper">
         <h1 class="hero__title">Some visual materials about pop-art</h1>
       </section>
-      <section class="video__content">
+
+      <div class="gallery-container">
+        <div class="slider">
+          <div
+            class="slide"
+            style="background-image: url('./src/img/slider1.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./src/img/slider2.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./src/img/slider3.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./src/img/slider4.jpeg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./src/img/slider5.jpeg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./src/img/slider6.jpeg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./src/img/star.svg')"
+          ></div>
+          <!-- Добавь свои картинки -->
+        </div>
+        <button class="prev" onclick="prevSlide()">Previous</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+        <div class="pagination"></div>
+      </div>
+
+      <!-- <section class="video__content">
         <iframe
           src="https://www.youtube.com/embed/dQw4w9WgXcQ"
           frameborder="0"
           allowfullscreen
         >
         </iframe>
-      </section>
-
-      <section class="img__slider">
-        <div class="slider">
-          <div class="slider-container">
-            <div class="slide">
-              <h2>Slide 1</h2>
-              <img src="./src/img/slider1.jpg" alt="" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="slide">
-              <h2>Slide 2</h2>
-              <img src="./src/img/slider2.jpg" alt="" />
-              <p>Nulla ac mi eu felis volutpat vestibulum.</p>
-            </div>
-            <div class="slide">
-              <h2>Slide 3</h2>
-              <img src="./src/img/slider3.jpg" alt="" />
-              <p>Sed euismod diam eu erat tincidunt, ut varius mi commodo.</p>
-            </div>
-          </div>
-          <div class="slider-navigation">
-            <button class="prev-slide">Previous</button>
-            <button class="next-slide">Next</button>
-          </div>
-        </div>
-      </section>
+      </section> -->
 
       <footer class="footer">
         <div class="section__wrapper">

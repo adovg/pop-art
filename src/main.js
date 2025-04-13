@@ -23,45 +23,62 @@ window.onload = () => {
 };
 
 ///slider
-document.addEventListener("DOMContentLoaded", function () {
-  const sliderContainer = document.querySelector(".slider-container");
-  const prevBtn = document.querySelector(".prev-slide");
-  const nextBtn = document.querySelector(".next-slide");
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const pagination = document.querySelector(".pagination");
 
-  let slideIndex = 0;
-  const slides = Array.from(sliderContainer.querySelectorAll(".slide"));
-  const totalSlides = slides.length;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.style.display = "flex";
-      } else {
-        slide.style.display = "none";
-      }
-    });
-  }
-
-  function nextSlide() {
-    slideIndex++;
-    if (slideIndex >= totalSlides) {
-      slideIndex = 0;
-    }
-    showSlide(slideIndex);
-  }
-
-  function prevSlide() {
-    slideIndex--;
-    if (slideIndex < 0) {
-      slideIndex = totalSlides - 1;
-    }
-    showSlide(slideIndex);
-  }
-
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
-
-  showSlide(slideIndex);
+// Создание точек пагинации
+slides.forEach((_, index) => {
+  const dot = document.createElement("span");
+  dot.classList.add("pagination-dot");
+  dot.addEventListener("click", () => goToSlide(index));
+  pagination.appendChild(dot);
 });
 
+const dots = document.querySelectorAll(".pagination-dot");
+
+function showSlide(index) {
+  const slider = document.querySelector(".slider");
+  slider.style.transform = `translateX(-${index * 100}%)`;
+
+  dots.forEach((dot) => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+}
+
+// Автопрокрутка (можно закомментировать эту часть для отключения автоплей)
+let autoPlayInterval = setInterval(nextSlide, 3000); // смена каждые 3 секунды
+
+// Если хочешь, чтобы автоплей останавливался при наведении курсора:
+document
+  .querySelector(".gallery-container")
+  .addEventListener("mouseenter", () => {
+    clearInterval(autoPlayInterval);
+  });
+
+document
+  .querySelector(".gallery-container")
+  .addEventListener("mouseleave", () => {
+    autoPlayInterval = setInterval(nextSlide, 3000);
+  });
+
+// Инициализация
+showSlide(currentSlide);
+
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
 ////slider
