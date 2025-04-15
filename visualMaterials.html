@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="frame-src https://www.youtube.com https://youtu.be"
+    />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="menu">
+          <div class="logo">
+            <img src="./src/img/star.svg" alt="Logo" />
+          </div>
+
+          <ul class="menu__items">
+            <li class="menu__item"><a href="./index.html"> About</a></li>
+            <li class="menu__item">
+              <a href="./visualMaterials.html">Visual Materials</a>
+            </li>
+            <li class="menu__item">
+              <a id="about-link" href="./mainArticle.html"> Text</a>
+            </li>
+            <li class="menu__item">
+              <button id="toggle-button">En/Ua</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="mobile">
+        <div class="burger__btn">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <ul class="menu-mobile hidden">
+        <div class="logo-mobile">
+          <img src="./src/img/star.svg" alt="" />
+        </div>
+
+        <li class="menu__item-mobile"><a href="#"> Item #1</a></li>
+        <li class="menu__item-mobile"><a href="#"> Item #2</a></li>
+        <li class="menu__item-mobile"><a href="#"> Item #3</a></li>
+        <li class="menu__item-mobile"><a href="#"> Item #4</a></li>
+      </ul>
+
+      <section class="section__wrapper">
+        <h1 class="hero__title visualMaterials__hero">
+          Some visual materials about pop-art
+        </h1>
+      </section>
+
+      <div class="gallery-container">
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide">
+              <img class="slide-image" src="./src/img/slider1.jpg" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./src/img/slider2.jpg" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./src/img/slider3.jpg" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./src/img/slider4.jpeg" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./src/img/slider5.jpeg" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./src/img/slider6.jpeg" />
+            </div>
+          </div>
+          <div class="slider-pagination"></div>
+          <button class="slider-prev">❮</button>
+          <button class="slider-next">❯</button>
+        </div>
+      </div>
+
+      <section class="video__gallery">
+        <div class="video__gallery-item">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+          <p class="video__description">description</p>
+        </div>
+        <div class="video__gallery-item">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+          <p>description</p>
+        </div>
+        <div class="video__gallery-item">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+          <p>description</p>
+        </div>
+        <div class="video__gallery-item">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+          <p>description</p>
+        </div>
+        <div class="video__gallery-item">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+          <p>description</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="section__wrapper">
+          <h3 class="footer__title">
+            All text materials are intellectual property
+          </h3>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

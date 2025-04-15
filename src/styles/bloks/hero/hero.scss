@@ -1,0 +1,53 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    background-image: url('./img/hero.jpeg');
+    background-size: cover;
+    margin: 0 0 80px;
+    height: 90vh;
+}
+
+.hero__title {
+
+
+
+
+    // width: 100vw;
+
+
+}
+
+.hero__title {
+    font-size: 60px;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 140px;
+    font-weight: bold;
+    color: #fafafa;
+    padding: 40px 20vw;
+}
+
+.hero__title-item {
+    display: block;
+    text-align: left;
+}
+
+.hero__title-item:nth-child(2) {
+    text-align: center;
+}
+
+.hero__title-item:nth-child(3) {
+    text-align: right;
+}
+
+.hero__title-item:nth-child(4) {
+    text-align: center;
+}
+
+
+.visualMaterials__hero {
+    color: #433c3c;
+}

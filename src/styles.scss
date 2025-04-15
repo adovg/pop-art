@@ -9,6 +9,8 @@
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
+  background-color: #f7f3ea;
+  background-color: #fafafa;
 }
 
 // .josefin-sans-<uniquifier> {
@@ -34,6 +36,7 @@ body {
   padding: 0 media.$containerSidePadding + px;
   //font-family: $fontMain;
   overflow: hidden;
+
 
   @media (max-width: media.$breakpoint480) {
     padding: 5px;
@@ -81,7 +84,9 @@ body {
 
 @include meta.load-css("styles/bloks/nav/hamburger-nav.scss");
 @include meta.load-css("styles/bloks/nav/nav.scss");
+@include meta.load-css("styles/bloks/hero/hero.scss");
 @include meta.load-css("styles/bloks/header/header.scss");
 @include meta.load-css("styles/bloks/footer/footer.scss");
 @include meta.load-css("styles/elements/slider/slider.scss");
-@include meta.load-css("styles/bloks/visualContent/visualContent.scss");
+@include meta.load-css("styles/bloks/visualMaterials/visualMaterials.scss");
+@include meta.load-css("styles/bloks/mainArticle/mainArticle.scss");

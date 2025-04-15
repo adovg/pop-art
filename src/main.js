@@ -2,6 +2,7 @@ import "../src/styles.scss";
 
 window.onload = () => {
   console.log("hello world");
+  /////////////////////////////////////////////////////////////////////////////    BURGER MENU
   // const burgerBtn = document.querySelector(".burger__btn");
   // const menuMobile = document.querySelector(".menu-mobile");
   // const accordion = document.getElementsByClassName("tab");
@@ -20,65 +21,134 @@ window.onload = () => {
   //   const menuMobile = document.querySelector(".menu-mobile");
   //   menuMobile.classList.toggle("hidden");
   // }
+  /////////////////////////////////////////////////////////////////////////////    BURGER MENU
 };
 
-///slider
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
-const pagination = document.querySelector(".pagination");
+document.addEventListener("DOMContentLoaded", function () {
+  /////////////////////////////////////////////////////////////////////////////    изменение языка
+  // Получаем элементы
+  const link = document.getElementById("about-link");
+  const button = document.getElementById("toggle-button");
 
-// Создание точек пагинации
-slides.forEach((_, index) => {
-  const dot = document.createElement("span");
-  dot.classList.add("pagination-dot");
-  dot.addEventListener("click", () => goToSlide(index));
-  pagination.appendChild(dot);
-});
+  // Проверяем, что элементы существуют
+  if (!link || !button) {
+    console.error("Ошибка: не найдены необходимые элементы!");
+    return;
+  }
 
-const dots = document.querySelectorAll(".pagination-dot");
+  // Функция переключения
+  function toggleLink() {
+    // Проверяем текущий href
+    const currentHref = link.getAttribute("href");
 
-function showSlide(index) {
+    if (currentHref === "mainArticleUa.html") {
+      // link.textContent = "Text (Ua)";
+      link.setAttribute("href", "mainArticleUa.html");
+    } else {
+      // link.textContent = "Text";
+      link.setAttribute("href", "mainArticleUa.html");
+    }
+  }
+
+  // Назначаем обработчик
+  button.addEventListener("click", toggleLink);
+
+  console.log("Скрипт успешно загружен!");
+  /////////////////////////////////////////////////////////////////////////////    изменение языка
+
+  ///////////////////////////////////////////////////////////////////////////////   Slider
   const slider = document.querySelector(".slider");
-  slider.style.transform = `translateX(-${index * 100}%)`;
+  const slides = document.querySelectorAll(".slide");
+  const pagination = document.querySelector(".slider-pagination");
+  const prevBtn = document.querySelector(".slider-prev");
+  const nextBtn = document.querySelector(".slider-next");
 
-  dots.forEach((dot) => dot.classList.remove("active"));
-  dots[index].classList.add("active");
-}
+  let currentIndex = 0;
+  let autoScrollInterval;
+  const intervalTime = 5000;
 
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
+  // Инициализация слайдера
+  function initSlider() {
+    createPagination();
+    updateSlider();
+    startAutoScroll();
+    setupEventListeners();
+  }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
+  // Создание пагинации
+  function createPagination() {
+    pagination.innerHTML = "";
 
-function goToSlide(index) {
-  currentSlide = index;
-  showSlide(currentSlide);
-}
+    slides.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.addEventListener("click", () => goToSlide(index));
+      pagination.appendChild(dot);
+    });
+  }
 
-// Автопрокрутка (можно закомментировать эту часть для отключения автоплей)
-let autoPlayInterval = setInterval(nextSlide, 3000); // смена каждые 3 секунды
+  // Обновление положения слайдера
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updatePagination();
+  }
 
-// Если хочешь, чтобы автоплей останавливался при наведении курсора:
-document
-  .querySelector(".gallery-container")
-  .addEventListener("mouseenter", () => {
-    clearInterval(autoPlayInterval);
-  });
+  // Обновление активной точки пагинации
+  function updatePagination() {
+    const dots = pagination.querySelectorAll("span");
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
+  }
 
-document
-  .querySelector(".gallery-container")
-  .addEventListener("mouseleave", () => {
-    autoPlayInterval = setInterval(nextSlide, 3000);
-  });
+  // Переход к конкретному слайду
+  function goToSlide(index) {
+    if (index < 0 || index >= slides.length) return;
+    currentIndex = index;
+    updateSlider();
+    resetAutoScroll();
+  }
 
-// Инициализация
-showSlide(currentSlide);
+  // Следующий слайд
+  function nextSlide() {
+    currentIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
+    updateSlider();
+    resetAutoScroll();
+  }
 
-window.nextSlide = nextSlide;
-window.prevSlide = prevSlide;
-////slider
+  // Предыдущий слайд
+  function prevSlide() {
+    currentIndex = currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
+    updateSlider();
+    resetAutoScroll();
+  }
+
+  // Автопрокрутка
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+
+  function resetAutoScroll() {
+    stopAutoScroll();
+    startAutoScroll();
+  }
+
+  // Обработчики событий
+  function setupEventListeners() {
+    prevBtn.addEventListener("click", prevSlide);
+    nextBtn.addEventListener("click", nextSlide);
+
+    // Пауза при наведении
+    slider.addEventListener("mouseenter", stopAutoScroll);
+    slider.addEventListener("mouseleave", startAutoScroll);
+
+    // Ресайз окна
+    window.addEventListener("resize", updateSlider);
+  }
+
+  // Запуск слайдера
+  initSlider();
+});

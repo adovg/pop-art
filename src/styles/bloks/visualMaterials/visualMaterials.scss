@@ -1,0 +1,25 @@
+.gallery-container {
+    margin: 50px 0;
+}
+
+.video__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    .video__gallery-item {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 50vh;
+
+
+        iframe {
+            width: 100%;
+            height: 90%;
+        }
+    }
+}
