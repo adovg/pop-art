@@ -8,6 +8,7 @@
       http-equiv="Content-Security-Policy"
       content="frame-src https://www.youtube.com https://youtu.be"
     />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Vite App</title>
   </head>
   <body>
@@ -46,91 +47,90 @@
           <img src="./src/img/star.svg" alt="" />
         </div>
 
-        <li class="menu__item-mobile"><a href="#"> Item #1</a></li>
+        <li class="menu__item-mobile"><a href="#"></li>
         <li class="menu__item-mobile"><a href="#"> Item #2</a></li>
         <li class="menu__item-mobile"><a href="#"> Item #3</a></li>
         <li class="menu__item-mobile"><a href="#"> Item #4</a></li>
       </ul>
 
-      <section class="section__wrapper">
+      <section class="section__wrapper gallery__wrapper">
         <h1 class="hero__title visualMaterials__hero">
           Some visual materials about pop-art
         </h1>
+
+         <div class="swiper">
+           <div class="swiper-wrapper">
+    <!-- Слайды -->
+    <div class="swiper-slide">
+      <img src="./src/img/slide1.jpg" alt="Image 1">
+    </div>
+    <div class="swiper-slide">
+      <img src="./src/img/slide2.jpg" alt="Image 2">
+    </div>
+    <div class="swiper-slide">
+      <img src="./src/img/slide3.jpg" alt="Image 3">
+    </div>
+        <div class="swiper-slide">
+      <img src="./src/img/slide4.jpg" alt="Image 3">
+    </div>
+        <div class="swiper-slide">
+      <img src="./src/img/slide5.jpg" alt="Image 3">
+    </div>
+        <div class="swiper-slide">
+      <img src="./src/img/slide6.jpg" alt="Image 3">
+    </div>
+        <div class="swiper-slide">
+      <img src="./src/img/slide7.jpg" alt="Image 3">
+    </div>
+           </div>
+    <!-- Пагинация -->
+  <div class="swiper-pagination"></div>
+  
+  <!-- Кнопки навигации -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+        </div>
       </section>
 
-      <div class="gallery-container">
-        <div class="slider-container">
-          <div class="slider">
-            <div class="slide">
-              <img class="slide-image" src="./src/img/slider1.jpg" />
-            </div>
-            <div class="slide">
-              <img class="slide-image" src="./src/img/slider2.jpg" />
-            </div>
-            <div class="slide">
-              <img class="slide-image" src="./src/img/slider3.jpg" />
-            </div>
-            <div class="slide">
-              <img class="slide-image" src="./src/img/slider4.jpeg" />
-            </div>
-            <div class="slide">
-              <img class="slide-image" src="./src/img/slider5.jpeg" />
-            </div>
-            <div class="slide">
-              <img class="slide-image" src="./src/img/slider6.jpeg" />
-            </div>
-          </div>
-          <div class="slider-pagination"></div>
-          <button class="slider-prev">❮</button>
-          <button class="slider-next">❯</button>
-        </div>
-      </div>
+
+  
+
 
       <section class="video__gallery">
         <div class="video__gallery-item">
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/bQ8YTBAT5vk?si=sEiLQ7DGBjjdLTDm"
             frameborder="0"
             allowfullscreen
           >
           </iframe>
-          <p class="video__description">description</p>
         </div>
         <div class="video__gallery-item">
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/_cXPjR9koYQ?si=PWkktG40hHSpm79Q"
             frameborder="0"
             allowfullscreen
           >
           </iframe>
-          <p>description</p>
+
         </div>
         <div class="video__gallery-item">
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/MBFoxrS0C24?si=77FMgsaW2g7sVRCx"
             frameborder="0"
             allowfullscreen
           >
           </iframe>
-          <p>description</p>
+
         </div>
         <div class="video__gallery-item">
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/yMbPtxlZdzo?si=wPNLbuDgWoKPLlTt"
             frameborder="0"
             allowfullscreen
           >
           </iframe>
-          <p>description</p>
-        </div>
-        <div class="video__gallery-item">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            frameborder="0"
-            allowfullscreen
-          >
-          </iframe>
-          <p>description</p>
+
         </div>
       </section>
 
@@ -144,5 +144,27 @@
     </div>
 
     <script type="module" src="./src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+  const swiper = new Swiper('.swiper', {
+    // Параметры
+    loop: true, // бесконечный цикл
+    autoplay: {
+      delay: 5000, // автоскролл каждые 5 сек
+    },
+    
+    // Пагинация
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    
+    // Навигация
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
   </body>
 </html>

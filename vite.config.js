@@ -15,7 +15,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "./index.html"),
-        materials: resolve(__dirname, "./materials.html"),
+        visualMaterials: resolve(__dirname, "./visualMaterials.html"),
+        mainArticle: resolve(__dirname, "./mainArticle.html"),
+        mainArticleUa: resolve(__dirname, "./mainArticleUa.html"),        
       },
     },
   },
