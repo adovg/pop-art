@@ -2,30 +2,30 @@ import "../src/styles.scss";
 
 window.onload = () => {
   console.log("hello world");
-  /////////////////////////////////////////////////////////////////////////////    BURGER MENU
-  // const burgerBtn = document.querySelector(".burger__btn");
-  // const menuMobile = document.querySelector(".menu-mobile");
-  // const accordion = document.getElementsByClassName("tab");
+  ///////////////////////////////////////////////////////////////////////////    BURGER MENU
+  const burgerBtn = document.querySelector(".burger__btn");
+  const menuMobile = document.querySelector(".menu-mobile");
+  const accordion = document.getElementsByClassName("tab");
 
-  // burgerBtn.onclick = function () {
-  //   burgerBtn.classList.toggle("active");
-  //   hideMenu();
-  // };
+  burgerBtn.onclick = function () {
+    burgerBtn.classList.toggle("active");
+    hideMenu();
+  };
 
-  // menuMobile.onclick = function () {
-  //   hideMenu();
-  //   burgerBtn.classList.remove("active");
-  // };
+  menuMobile.onclick = function () {
+    hideMenu();
+    burgerBtn.classList.remove("active");
+  };
 
-  // function hideMenu() {
-  //   const menuMobile = document.querySelector(".menu-mobile");
-  //   menuMobile.classList.toggle("hidden");
-  // }
-  /////////////////////////////////////////////////////////////////////////////    BURGER MENU
+  function hideMenu() {
+    const menuMobile = document.querySelector(".menu-mobile");
+    menuMobile.classList.toggle("hidden");
+  }
+  ///////////////////////////////////////////////////////////////////////////    BURGER MENU
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  /////////////////////////////////////////////////////////////////////////////    изменение языка
+  ///////////////////////////////////////////////////////////////////////////    изменение языка
   // // Получаем элементы
   // const link = document.getElementById("about-link");
   // const button = document.getElementById("toggle-button");
@@ -49,5 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // // Назначаем обработчик
   // button.addEventListener("click", toggleLink);
   // console.log("Скрипт успешно загружен!");
-  /////////////////////////////////////////////////////////////////////////////    изменение языка
+  ///////////////////////////////////////////////////////////////////////////    изменение языка
 });

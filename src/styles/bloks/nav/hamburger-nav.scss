@@ -53,11 +53,18 @@ $breakpoint768: 768px;
   flex-direction: column;
   font-size: 7vh;
   padding-top: 10px;
+  background-color: #fafafa;
+  opacity: 0.9;
 
   .menu__item-mobile {
     cursor: pointer;
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 
-    a {}
+    a {
+      color: #000;
+    }
 
     &:hover {
       transition: 0.8s hover ease;
