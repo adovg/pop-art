@@ -1,11 +1,28 @@
 import "../src/styles.scss";
 
+function switchLanguage(lang) {
+  const link = document.getElementById("about-link");
+  if (!link) return;
+
+  if (lang === "ua") {
+    link.href = "./mainArticleUa.html";
+  } else {
+    link.href = "./mainArticle.html";
+  }
+  localStorage.setItem("selectedLang", lang);
+}
+document.getElementById("lang-btn").addEventListener("click", () => {
+  switchLanguage("ua");
+});
 window.onload = () => {
-  console.log("hello world");
+  const savedLang = localStorage.getItem("selectedLang");
+  if (savedLang) {
+    switchLanguage(savedLang);
+  }
+
   ///////////////////////////////////////////////////////////////////////////    BURGER MENU
   const burgerBtn = document.querySelector(".burger__btn");
   const menuMobile = document.querySelector(".menu-mobile");
-  const accordion = document.getElementsByClassName("tab");
 
   burgerBtn.onclick = function () {
     burgerBtn.classList.toggle("active");
@@ -23,31 +40,3 @@ window.onload = () => {
   }
   ///////////////////////////////////////////////////////////////////////////    BURGER MENU
 };
-
-document.addEventListener("DOMContentLoaded", function () {
-  ///////////////////////////////////////////////////////////////////////////    изменение языка
-  // // Получаем элементы
-  // const link = document.getElementById("about-link");
-  // const button = document.getElementById("toggle-button");
-  // // Проверяем, что элементы существуют
-  // if (!link || !button) {
-  //   console.error("Ошибка: не найдены необходимые элементы!");
-  //   return;
-  // }
-  // // Функция переключения
-  // function toggleLink() {
-  //   // Проверяем текущий href
-  //   const currentHref = link.getAttribute("href");
-  //   if (currentHref === "mainArticleUa.html") {
-  //     // link.textContent = "Text (Ua)";
-  //     link.setAttribute("href", "mainArticleUa.html");
-  //   } else {
-  //     // link.textContent = "Text";
-  //     link.setAttribute("href", "mainArticleUa.html");
-  //   }
-  // }
-  // // Назначаем обработчик
-  // button.addEventListener("click", toggleLink);
-  // console.log("Скрипт успешно загружен!");
-  ///////////////////////////////////////////////////////////////////////////    изменение языка
-});

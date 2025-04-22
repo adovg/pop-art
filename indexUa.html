@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -8,7 +8,7 @@
       name="google-site-verification"
       content="aOeceDdwoDdK-Um1OYNC8o_dT96qInGtO0DkAPTAOWQ"
     />
-    <title>American Pop Art</title>
+    <title>Vite App</title>
   </head>
 
   <body>
@@ -26,9 +26,9 @@
           <li class="menu__item">
             <a id="about-link" href="./mainArticle.html"> Text</a>
           </li>
-          <li>
-            <button id="lang-btn">UA</button>
-          </li>
+          <!-- <li class="menu__item">
+            <button id="toggle-button">En/Ua</button>
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -65,11 +65,12 @@
       </div>
     </section>
 
+    <!-- <section class="hero">Some info about project</section> -->
     <div class="container">
       <section class="about section__wrapper">
         <div class="about__item">
           <div class="about__title">
-            <h2>Evolution of American Pop Art</h2>
+            <h2>Еволюція американського поп арту</h2>
           </div>
           <div class="about__item-divider"></div>
           <div class="about__content">
@@ -145,19 +146,13 @@
       </footer>
     </div>
 
-    <!-- <script>
-      function switchLanguage(lang) {
-        console.log("hello world");
-        const link = document.getElementById("about-link");
-        if (!link) return;
-
-        if (lang === "ua") {
-          link.href = "./mainArticleUa.html";
-        } else {
-          link.href = "./mainArticle.html";
-        }
-      }
-    </script> -->
     <script type="module" src="./src/main.js"></script>
+    <script>
+      console.log("!");
+      const lang = navigator.language || navigator.userLanguage;
+      if (lang.startsWith("uk")) {
+        window.location.href = "./indexUa.html";
+      }
+    </script>
   </body>
 </html>

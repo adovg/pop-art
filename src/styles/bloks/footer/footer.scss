@@ -1,9 +1,26 @@
 .footer {
   padding-top: 56px;
   padding-bottom: 26px;
-  // margin-top: 60%;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-evenly
 }
 
 .footer__title {
+  display: block;
   text-align: left;
+}
+
+.footer__mail {}
+
+.footer__mail-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(./img/email.svg);
 }
