@@ -2,36 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-ecc97554.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-site-verification"
       content="aOeceDdwoDdK-Um1OYNC8o_dT96qInGtO0DkAPTAOWQ"
     />
-    <title>Vite App</title>
-    <script type="module" crossorigin src="./assets/main-734203ea.js"></script>
-    <link rel="stylesheet" href="./assets/main-ca42d041.css">
+    <title>American Pop Art</title>
+    <script type="module" crossorigin src="./assets/main-e06ab706.js"></script>
+    <link rel="stylesheet" href="./assets/main-9bcebfb2.css">
   </head>
 
   <body>
     <nav class="navbar">
       <div class="menu">
-        <div class="logo">
-          <img src="./assets/star-5a136c56.svg" alt="Logo" />
-        </div>
-
         <ul class="menu__items">
-          <li class="menu__item"><a href="./index.html"> About</a></li>
           <li class="menu__item">
-            <a href="./visualMaterials.html">Visual Materials</a>
+            <a href="./index.html" data-i18n="about"> About</a>
           </li>
           <li class="menu__item">
-            <a id="about-link" href="./mainArticle.html"> Text</a>
+            <a href="./visualMaterials.html" data-i18n="visuals"
+              >Visual Materials</a
+            >
           </li>
-          <!-- <li class="menu__item">
-            <button id="toggle-button">En/Ua</button>
-          </li> -->
+          <li class="menu__item">
+            <a id="about-link" href="./mainArticle.html" data-i18n="text">
+              Text</a
+            >
+          </li>
+          <li></li>
         </ul>
+        <button id="lang-btn">UA</button>
       </div>
     </nav>
 
@@ -59,24 +60,25 @@
 
     <section class="hero">
       <div class="hero__title">
-        <span class="hero__title-item">American Pop Art</span>
-        <span class="hero__title-item">and its</span>
+        <span class="hero__title-item" data-i18n="hero__title_1"
+          >American Pop Art</span
+        >
+        <span class="hero__title-item" data-i18n="hero__title_2">and its</span>
 
-        <span class="hero__title-item">Modern</span>
-        <span class="hero__title-item">Models</span>
+        <span class="hero__title-item" data-i18n="hero__title_3">Modern</span>
+        <span class="hero__title-item" data-i18n="hero__title_4">Models</span>
       </div>
     </section>
 
-    <!-- <section class="hero">Some info about project</section> -->
     <div class="container">
       <section class="about section__wrapper">
         <div class="about__item">
           <div class="about__title">
-            <h2>Evolution of American Pop Art</h2>
+            <h2 data-i18n="about__title_1">Evolution of American Pop Art</h2>
           </div>
           <div class="about__item-divider"></div>
           <div class="about__content">
-            <p class="about__text">
+            <p data-i18n="about__text_1" class="about__text">
               Mid-20th-century Pop Art (e.g., Rauschenberg, Warhol,
               Lichtenstein) revolutionized artistic paradigms through mass
               culture, democratization, and synthetic styles. Key techniques:
@@ -87,11 +89,11 @@
         </div>
         <div class="about__item">
           <div class="about__title">
-            <h2>Global Impact</h2>
+            <h2 data-i18n="about__title_2">Global Impact</h2>
           </div>
           <div class="about__item-divider"></div>
           <div class="about__content">
-            <p class="about__text">
+            <p data-i18n="about__text_2" class="about__text">
               Pop Art’s influence spread to Europe (e.g., German Neo-Dada), Asia
               (Japanese adaptations), and Latin America, often merging with
               local traditions. Examples: Damien Hirst’s provocative
@@ -103,11 +105,13 @@
 
         <div class="about__item">
           <div class="about__title">
-            <h2>Digital & Post-Digital Transformation</h2>
+            <h2 data-i18n="about__title_3">
+              Digital & Post-Digital Transformation
+            </h2>
           </div>
           <div class="about__item-divider"></div>
           <div class="about__content">
-            <p class="about__text">
+            <p data-i18n="about__text_3" class="about__text">
               Contemporary artists (e.g., Refik Anadol, Krista Kim) use AI, VR,
               and interactive media to create immersive, multi-sensory
               experiences. Themes: Digital humanism, environmental activism
@@ -119,11 +123,13 @@
 
         <div class="about__item">
           <div class="about__title">
-            <h2>Socio-Cultural & Civic Engagement</h2>
+            <h2 data-i18n="about__title_4">
+              Socio-Cultural & Civic Engagement
+            </h2>
           </div>
           <div class="about__item-divider"></div>
           <div class="about__content">
-            <p class="about__text">
+            <p data-i18n="about__text_4" class="about__text">
               Artists like Wiley and Mickalene Thomas address identity, race,
               and social justice through reimagined classical techniques and pop
               art aesthetics. Exhibitions like Pop Forever (Louis Vuitton
