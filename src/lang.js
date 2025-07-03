@@ -19,6 +19,7 @@ const translations = {
       "Contemporary artists (e.g., Refik Anadol, Krista Kim) use AI, VR, and interactive media to create immersive, multi-sensory experiences. Themes: Digital humanism, environmental activism (e.g., Anadol’s Glacial Dream), and redefining art’s role in a tech-driven society.",
     about__text_4:
       "Artists like Wiley and Mickalene Thomas address identity, race, and social justice through reimagined classical techniques and pop art aesthetics. Exhibitions like Pop Forever (Louis Vuitton Foundation, 2024–25) highlight Pop Art’s enduring relevance.",
+    visual_content: "Some visual materials about pop-art",
   },
   ua: {
     about: "Про нас",
@@ -40,6 +41,7 @@ const translations = {
       "Сучасні митці (наприклад, Рефік Анадол, Кріста Кім) використовують штучний інтелект, віртуальну реальність та інтерактивні медіа для створення захопливих, мультисенсорних вражень. Теми: цифровий гуманізм, екологічний активізм (наприклад, «Льодовикова мрія Анадола») та переосмислення ролі мистецтва в технологічно керованому суспільстві.",
     about__text_4:
       "Такі митці, як Вайлі та Мікалін Томас, звертаються до питань ідентичності, раси та соціальної справедливості за допомогою переосмислення класичних технік та естетики поп-арту. Виставки, такі як «Pop Forever» (Фонд Луї Віттона, 2024–2025), підкреслюють незмінну актуальність поп-арту.",
+    visual_content: "Деякі візуальні матеріали",
   },
 };
 

@@ -4,25 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Про поп-арт</title>
+    <link rel="icon" type="image/svg+xml" href="./src/img/favicon.svg" />
   </head>
   <body>
     <nav class="navbar">
       <div class="menu">
-        <div class="logo">
-          <img src="./src/img/star.svg" alt="Logo" />
-        </div>
-
         <ul class="menu__items">
-          <li class="menu__item"><a href="./index.html"> About</a></li>
           <li class="menu__item">
-            <a href="./visualMaterials.html">Visual Materials</a>
+            <a href="./index.html" data-i18n="about"> About</a>
           </li>
           <li class="menu__item">
-            <a id="about-link" href="./mainArticle.html"> Text</a>
+            <a href="./visualMaterials.html" data-i18n="visuals"
+              >Visual Materials</a
+            >
           </li>
+          <li class="menu__item">
+            <a id="about-link" href="./mainArticle.html" data-i18n="text">
+              Text</a
+            >
+          </li>
+          <li></li>
         </ul>
+        <button id="lang-btn">UA</button>
       </div>
     </nav>
+
+    <div class="mobile">
+      <div class="burger__btn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <ul class="menu-mobile hidden">
+      <div class="logo-mobile">
+        <img src="./src/img/star.svg" alt="" />
+      </div>
+
+      <li class="menu__item-mobile"><a href="./index.html"> About</a></li>
+      <li class="menu__item-mobile">
+        <a href="./visualMaterials.html">Visual Materials</a>
+      </li>
+      <li class="menu__item-mobile">
+        <a id="about-link" href="./mainArticle.html"> Text</a>
+      </li>
+    </ul>
 
     <div class="container">
       <section class="main__content">
